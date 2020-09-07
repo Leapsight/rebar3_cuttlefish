@@ -92,7 +92,7 @@ do(State) ->
                                   {vm_args, false},
                                   {generate_start_script, false},
                                   {overlay, Overlays2}]),
-    Res = rebar_relx:do(rlx_prv_release, "release", ?PROVIDER, State1),
+    Res = rebar_relx:do(?PROVIDER, State1),
     SchemaGlob = filename:join([TargetDir, "share", "schema", "*.schema"]),
     ReleaseSchemas = filelib:wildcard(SchemaGlob),
 

@@ -30,7 +30,7 @@ init(State) ->
 
 -spec do(rebar_state:t()) -> {ok, rebar_state:t()} | {error, string()}.
 do(State) ->
-    rebar_relx:do(rlx_prv_release, "tar", ?PROVIDER, State).
+    rebar_relx:do(?PROVIDER, State).
 
 -spec format_error(any()) ->  iolist().
 format_error(Error) ->
